@@ -1,7 +1,7 @@
 questions = 
     [[//Federal-Unitary`
         [//4
-            "There is no need for a national government",
+            "Are you gay?",
             "Subdivisions of nations should have their own militaries",
             "State laws should have precedence over national laws"
         ],
