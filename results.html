@@ -15,12 +15,12 @@
 
 <h1>Results</h1>
 
-<h2><span class="weight-300" id="a-label"></span></h2>
+<h2><span class="weight-300" id="a-label">Very Gay</span></h2>
 <div class="axis">
-    <img id="img-federal" src="value_images/federal.png" height="128pt"/>
+    <img id="img-federal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/1200px-Gay_Pride_Flag.svg.png" height="128pt"/>
     <div class="bar federal" id="bar-federal"><div class="text-wrapper" id="federal"></div></div>
     <div class="bar unitary" id="bar-unitary"><div class="text-wrapper" id="unitary"></div></div>
-    <img id="img-unitary" src="value_images/unitary.png" height="128pt"/>
+    <img id="img-unitary" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Heterosexual_flag_%28black-white_stripes%29.svg/1200px-Heterosexual_flag_%28black-white_stripes%29.svg.png" height="128pt"/>
 </div>
 
 <br><br>
@@ -48,8 +48,13 @@
     function setBarValue(name, value) {
         innerel = document.getElementById(name)
         outerel = document.getElementById("bar-" + name)
-        outerel.style.width = (100 + "%")
-        innerel.innerHTML = (100 + "%")
+        if (name == "federal") {
+            outerel.style.width = (100 + "%")
+            innerel.innerHTML = (100 + "%")
+        } else {
+            outerel.style.width = (0 + "%")
+            innerel.innerHTML = (0 + "%")
+        }
         if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
             innerel.style.visibility = "hidden"
         }
