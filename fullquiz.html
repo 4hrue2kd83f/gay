@@ -14,17 +14,17 @@
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
-<button class="button" onclick="next_question( 2)" style="background-color: #1b5e20;">Strongly Agree</button> <br>
-<button class="button" onclick="next_question( 1)" style="background-color: #4caf50;">Agree</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #1b5e20;">Strongly Agree</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #4caf50;">Agree</button> <br>
 <button class="button" onclick="next_question( 0)" style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
-<button class="button" onclick="next_question(-1)" style="background-color: #f44336;">Disagree</button> <br>
-<button class="button" onclick="next_question(-2)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #f44336;">Disagree</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
 <button class="small_button" onclick="prev_question()" id="back_button">Previous</button>
 <button class="small_button_off" id="back_button_off">Previous</button><br>
 
 
 <script>
-    var scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];//fed, dem, glo, mil, fre, equ, sec, pro, mul - User's scores
+    var scores = [100, 0, 0, 0, 0, 0, 0, 0, 0];//fed, dem, glo, mil, fre, equ, sec, pro, mul - User's scores
     var qn = 0; // Question number
     var answers = [];
     var quests = [];
@@ -33,11 +33,11 @@
 
     function init_all_questions(qs) {
         //1,2,3,-2,-4
-        for(var i = 0; i < 9; i++) //Number of Axes
+        for(var i = 0; i < 1; i++) //Number of Axes
         {
-            for(var  j = 0; j < questions[i].length; j++)
+            for(var  j = 0; j < 1; j++)
             {
-                for(var k = 0; k < questions[i][j].length; k++)
+                for(var k = 0; k < 1; k++)
                 {
                     var m = [i, j, k];
                     qs.push(m);
